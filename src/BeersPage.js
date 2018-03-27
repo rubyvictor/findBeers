@@ -21,7 +21,12 @@ class BeersPage extends Component {
     return this.state.beers.map((beer, i) => {
       return (
         <div key={i}>
-          <BeerCard imageUrl={beer.image_url} />
+          <BeerCard
+            imageUrl={beer.image_url}
+            name={beer.name}
+            description={beer.description}
+            food_pairing={beer.food_pairing}
+          />
         </div>
       );
     });
