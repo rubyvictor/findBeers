@@ -25,8 +25,11 @@ describe("ComponentDidMount() http operation", () => {
 
 describe('BeersPage should load properly', () => {
     it('should render BeersPage properly', () => {
-        const wrapper = shallow(<BeerCard/>);
+        const wrapper = shallow(<BeerCard />);
         expect(wrapper.find(BeerCard)).toHaveLength(0);
-        
+        expect(wrapper.find("imageUrl")).toHaveLength(0);
+        expect(wrapper.find("name")).toHaveLength(0);
+        expect(wrapper.find("description")).toHaveLength(0);
+        expect(wrapper.find("food_pairing")).toHaveLength(0);
     });
 });
