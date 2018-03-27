@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import BeerCard from "./BeerCard";
+import BeerCard from "../BeerCard/BeerCard";
 
 class BeersPage extends Component {
   constructor() {

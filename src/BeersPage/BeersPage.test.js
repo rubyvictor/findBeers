@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
-import BeersPage from "./BeersPage";
-import BeerCard from "./BeerCard";
+import BeersPage from "../BeersPage/BeersPage";
+import BeerCard from "../BeerCard/BeerCard";
 import nock from "nock";
 
 describe("ComponentDidMount() http operation", () => {
