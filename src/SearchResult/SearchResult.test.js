@@ -33,3 +33,5 @@ describe("SearchResult should load properly", () => {
     expect(wrapper.find("food_pairing")).toHaveLength(0);
   });
 });
+
+

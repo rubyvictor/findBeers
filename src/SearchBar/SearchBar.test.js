@@ -13,3 +13,21 @@ describe("SearchBar tests for structure", () => {
     expect(wrapper.find("button")).toHaveLength(1);
   });
 });
+
+describe("SearchBar tests for handlers", () => {
+  it("should be able to call handleChange", () => {
+    const wrapper = shallow(<SearchBar />);
+    wrapper.find("input").simulate("change", { target: { value: "a" } });
+    expect(wrapper.state().searchTerm).toEqual("a");
+  });
+
+  it("should be able to call handleSummit", () => {
+    const mockSearchBeers = jest.fn();
+    const wrapper = shallow(<SearchBar searchBeers={mockSearchBeers} />);
+    console.log(wrapper.find("button"));
+    expect(wrapper.find("button")).toHaveLength(1);
+
+    wrapper.find("button").simulate("click", { preventDefault() {} });
+    expect(mockSearchBeers).toBeCalled();
+  });
+});
