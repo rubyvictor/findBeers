@@ -1,7 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
 import SearchResult from "../SearchResult/SearchResult";
-import fetchMock from "fetch-mock";
 import SearchBar from "./SearchBar";
 
 describe("SearchBar tests for structure", () => {
@@ -24,7 +23,6 @@ describe("SearchBar tests for handlers", () => {
   it("should be able to call handleSummit", () => {
     const mockSearchBeers = jest.fn();
     const wrapper = shallow(<SearchBar searchBeers={mockSearchBeers} />);
-    console.log(wrapper.find("button"));
     expect(wrapper.find("button")).toHaveLength(1);
 
     wrapper.find("button").simulate("click", { preventDefault() {} });

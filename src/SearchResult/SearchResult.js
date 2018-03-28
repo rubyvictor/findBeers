@@ -29,7 +29,6 @@ class SearchResult extends Component {
   }
 
   render() {
-    console.log(this.state.filterBeers);
     return (
       <div>
         <SearchBar searchBeers={this.searchBeers.bind(this)} />

@@ -3,6 +3,7 @@ import { shallow } from "enzyme";
 import SearchResult from "../SearchResult/SearchResult";
 import BeerCard from "../BeerCard/BeerCard";
 import nock from "nock";
+import fetchMock from "fetch-mock";
 
 describe("ComponentDidMount() http operation", () => {
   it("managed to fetch data from the API", async () => {
