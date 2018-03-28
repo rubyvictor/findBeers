@@ -23,14 +23,13 @@ describe("ComponentDidMount() http operation", () => {
   });
 });
 
-describe('SearchResult should load properly', () => {
-    it('should render SearchResult
-   properly', () => {
-        const wrapper = shallow(<BeerCard />);
-        expect(wrapper.find(BeerCard)).toHaveLength(0);
-        expect(wrapper.find("imageUrl")).toHaveLength(0);
-        expect(wrapper.find("name")).toHaveLength(0);
-        expect(wrapper.find("description")).toHaveLength(0);
-        expect(wrapper.find("food_pairing")).toHaveLength(0);
-    });
+describe("SearchResult should load properly", () => {
+  it("should render SearchResult properly", () => {
+    const wrapper = shallow(<BeerCard />);
+    expect(wrapper.find(BeerCard)).toHaveLength(0);
+    expect(wrapper.find("imageUrl")).toHaveLength(0);
+    expect(wrapper.find("name")).toHaveLength(0);
+    expect(wrapper.find("description")).toHaveLength(0);
+    expect(wrapper.find("food_pairing")).toHaveLength(0);
+  });
 });
