@@ -10,7 +10,7 @@ class BeersPage extends Component {
   }
 
   componentDidMount() {
-    fetch("https://api.punkapi.com/v2/beers?page=1&per_page=10")
+    fetch("https://api.punkapi.com/v2/beers?")
       .then(data => {
         return data.json();
       })
