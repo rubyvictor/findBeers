@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import BeersPage from "../BeersPage/BeersPage";
+import SearchResult from "../SearchResult/SearchResult";
 import BeerCard from "../BeerCard/BeerCard";
 import nock from "nock";
 
@@ -23,8 +23,9 @@ describe("ComponentDidMount() http operation", () => {
   });
 });
 
-describe('BeersPage should load properly', () => {
-    it('should render BeersPage properly', () => {
+describe('SearchResult should load properly', () => {
+    it('should render SearchResult
+   properly', () => {
         const wrapper = shallow(<BeerCard />);
         expect(wrapper.find(BeerCard)).toHaveLength(0);
         expect(wrapper.find("imageUrl")).toHaveLength(0);

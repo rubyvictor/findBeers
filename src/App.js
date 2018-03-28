@@ -1,14 +1,25 @@
 import React, { Component } from "react";
-import BeersPage from "./BeersPage/BeersPage";
+import SearchResult from "./SearchResult/SearchResult";
 import "./App.css";
 import SearchBar from "./SearchBar/SearchBar";
 
 class App extends Component {
+constructor(){
+  super();
+  this.state = {
+  };
+}
+
+getBeers(){
+
+}
+
+
   render() {
     return (
       <div>
       <SearchBar/>
-      <BeersPage />
+      <SearchResult />
       </div>
     );
   }

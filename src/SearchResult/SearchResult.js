@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import BeerCard from "../BeerCard/BeerCard";
 
-class BeersPage extends Component {
+class SearchResult extends Component {
   constructor() {
     super();
     this.state = {
@@ -33,4 +33,4 @@ class BeersPage extends Component {
   }
 }
 
-export default BeersPage;
+export default SearchResult;
