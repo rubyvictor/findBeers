@@ -17,7 +17,7 @@ class SearchResult extends Component {
         return data.json();
       })
       .then(data => {
-        this.setState({ beers: data, filterBeers: data })
+        this.setState({ beers: data, filterBeers: data });
       });
   }
 
