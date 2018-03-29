@@ -3,21 +3,10 @@ import SearchResult from "./SearchResult/SearchResult";
 import "./App.css";
 
 class App extends Component {
-constructor(){
-  super();
-  this.state = {
-  };
-}
-
-getBeers(){
-
-}
-
-
   render() {
     return (
       <div>
-      <SearchResult />
+        <SearchResult />
       </div>
     );
   }
