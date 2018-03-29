@@ -11,12 +11,14 @@ class SearchResult extends Component {
     };
   }
 
-  componentDidMount() {
-    fetch("https://api.punkapi.com/v2/beers?")
+  async componentDidMount() {
+    await fetch("https://api.punkapi.com/v2/beers?")
       .then(data => {
         return data.json();
       })
-      .then(data => this.setState({ beers: data, filterBeers: data }));
+      .then(data => {
+        this.setState({ beers: data, filterBeers: data })
+      });
   }
 
   searchBeers(searchTerm) {
@@ -50,4 +52,3 @@ class SearchResult extends Component {
 }
 
 export default SearchResult;
-module.exports = "componentDidMount";

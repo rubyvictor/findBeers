@@ -1,21 +1,20 @@
 import React from "react";
-import { shallow } from "enzyme";
-import { componentDidMount } from "../SearchResult/SearchResult";
+import { shallow, render } from "enzyme";
+import SearchResult from "./SearchResult";
 import BeerCard from "../BeerCard/BeerCard";
-import nock from "nock";
 import fetchMock from "fetch-mock";
 
-describe("ComponentDidMount() http operation", () => {
-  it("was able to do a simple http GET request via fetch", () => {
-    const myMock = fetchMock.mock("https://api.punkapi.com/v2/beers?", "GET", {
+describe("componentDidMount() http operation", () => {
+  it("was able to do a simple http GET request via fetch", async () => {
+    const myMock = fetchMock.mock("https://api.punkapi.com/v2/beers?", {
       status: 200,
-      body: {
-        name: "ABC stout",
-        description: "local beer",
-        imageUrl: "abc.com",
-        food_pair: "great with seafood"
-      }
+      body: [{name: "ABC Beer"}]
     });
+    const wrapper = shallow(<SearchResult />);
+    await wrapper.instance().componentDidMount();
+    expect(wrapper.instance().state.beers).toEqual([{ name: "ABC Beer" }]);
+    //check state next
+    
   });
 });
 
