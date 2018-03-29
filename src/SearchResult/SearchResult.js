@@ -50,3 +50,4 @@ class SearchResult extends Component {
 }
 
 export default SearchResult;
+module.exports = "componentDidMount";

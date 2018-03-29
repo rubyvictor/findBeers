@@ -1,26 +1,21 @@
 import React from "react";
 import { shallow } from "enzyme";
-import SearchResult from "../SearchResult/SearchResult";
+import { componentDidMount } from "../SearchResult/SearchResult";
 import BeerCard from "../BeerCard/BeerCard";
 import nock from "nock";
 import fetchMock from "fetch-mock";
 
 describe("ComponentDidMount() http operation", () => {
-  it("managed to fetch data from the API", async () => {
-    const fetcher = nock("https://api.punkapi.com/v2/beers?page=1&per_page=1")
-      .get("beers?page=1&per_page=1")
-      .reply(200, {
-        name: "Buzz",
-        description:
-          "A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.",
-        image_url: "https://images.punkapi.com/v2/keg.png",
-        food_pairing: [
-          "Spicy chicken tikka masala",
-          "Grilled chicken quesadilla",
-          "Caramel toffee cake"
-        ]
-      });
-    fetcher.isDone();
+  it("was able to do a simple http GET request via fetch", () => {
+    const myMock = fetchMock.mock("https://api.punkapi.com/v2/beers?", "GET", {
+      status: 200,
+      body: {
+        name: "ABC stout",
+        description: "local beer",
+        imageUrl: "abc.com",
+        food_pair: "great with seafood"
+      }
+    });
   });
 });
 
@@ -34,5 +29,3 @@ describe("SearchResult should load properly", () => {
     expect(wrapper.find("food_pairing")).toHaveLength(0);
   });
 });
-
-
