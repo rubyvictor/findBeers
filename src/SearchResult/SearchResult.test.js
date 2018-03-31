@@ -27,13 +27,15 @@ describe("SearchResult should load properly", () => {
   });
 });
 
-// describe('searchBeer func should be called properly', () => {
-//   it("should be able to call searchBeer()", () => {
-//     const mockSearchBeers = jest.fn();
-//     const wrapper = shallow(<SearchResult />);
-//     expect(wrapper.find(searchBeers)).toHaveLength(1);
+describe("searchBeer func test", () => {
+  it("is able to set State if a valid searchTerm is supplied and returns a beer", () => {
+    const wrapper = shallow(<SearchResult />);
 
-//     wrapper.find("button").simulate("click", { preventDefault() {} });
-//     expect(mockSearchBeers).toBeCalled();
-//   });
-// });
+    wrapper.setState({ filterBeers: [{ name: "ABC beer" }] });
+    expect(wrapper.state().filterBeers).toHaveLength(1);
+
+    console.log(wrapper.state().filterBeers);
+  });
+
+  it("should filter the beers array", () => {});
+});
