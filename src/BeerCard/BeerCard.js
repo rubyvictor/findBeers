@@ -1,17 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./BeerCard.css"
 
 const BeerCard = props => {
   return (
-    <div className="beerCard">
-      <img
-        className="beerCardPictures"
-        src={props.imageUrl}
-        alt="An awesome beer"
-      />
-      <h1 className="beerCardTitles">{props.name}</h1>
-      <h2 className="beerCardDescriptions">{props.description}</h2>
-      <h3 className="beerCardFoodPairs">{props.food_pairing}</h3>
+    <div className="beer-container">
+      <div className="beer-icon-container" id="icon">
+        <img
+          className="beer-icon"
+          src={props.imageUrl}
+          alt="An awesome beer icon"
+        />
+      </div>
+      <div>
+        <h1 className="beer-title">{props.name}</h1>
+        <h2 className="beer-description">{props.description}</h2>
+        <h3 className="beer-food-pair">{props.food_pairing}</h3>
+      </div>
     </div>
   );
 };
