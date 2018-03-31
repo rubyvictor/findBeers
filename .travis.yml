@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- '9'
+cache:
+  directories:
+  - node_modules
+script:
+- yarn test
+- yarn build
+deploy:
+  provider: heroku
+  app: find-beers
+  on:
+    repo: rubyvictor/findBeers
+  api_key:
+    secure: muA8WR/RJrW2ZOrFGzYcin+y3+vViM4/ogIPBfekqh8f/nCSR2moOJOB1I1svbl/xVR5xbRHwC0OCr7jwa5aDB/tDLp4sB7p3sX7aH8VFOZVlYu4J3W3w0v4HHzy74vIdAlemPC3eNXrqt7Vo7W5cZjrIbTyE96JIB9AS1aeETRlmeh90x+dLYIFvqua5eAGs5IQ6KdLcfqm9JwvRvcKznCNJ0nhnCQsakaF8wEN8DlyORvsatvvWrS7koPQBFFKFRhbShhVflNWnte+Dw1FYMtZRxTKoOFyLnzzRtQkxFTW4LJqku9FwNe133R+SeytFgmXdcmLywM7cRLV5Oh6Sg3uM2atS/TY40JilI1rkCs1KimkMLkqyiqbOn46AwcX29zntwcJ9pP7VV5lqpEFvZYRrtZYGSvkNeoKY3o1jmYhluwp6fyeo5gqWZcXDCs7VPPKGqVyuWSsLAChQZLZvjXVTFiBfy2/8Y2pBNNbPqz4MGztYhN0aJwBOp18h+oLuwQTMXlj1kQvH9HdXi01yJkcuCiJATZHBTw4V5MLQ+byHqvMtbZOhCBZEJDrmBjp8YSNwNQ8kFpe1NQEA/E6/jUjnRDoIsiV6eu9SdqGuNwk0xUYgGiPVD7qaYWBzYEYGgsb92PV5UpVPaSoI9vn0y1havZE10I4itRDOuoSXak=
