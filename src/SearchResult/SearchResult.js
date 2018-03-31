@@ -21,8 +21,8 @@ class SearchResult extends Component {
       });
   }
 
-  searchBeers(searchTerm) {
-    const foundBeers = this.state.beers.filter(beer =>
+  async searchBeers(searchTerm) {
+    const foundBeers = await this.state.beers.filter(beer =>
       beer.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
     this.setState({

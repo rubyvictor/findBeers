@@ -3,6 +3,7 @@ import { shallow, render } from "enzyme";
 import SearchResult, { searchBeers } from "./SearchResult";
 import BeerCard from "../BeerCard/BeerCard";
 import fetchMock from "fetch-mock";
+import SearchBar from "../SearchBar/SearchBar";
 
 describe("componentDidMount() http operation", () => {
   it("was able to do a simple http GET request via fetch", async () => {
@@ -33,9 +34,13 @@ describe("searchBeer func test", () => {
 
     wrapper.setState({ filterBeers: [{ name: "ABC beer" }] });
     expect(wrapper.state().filterBeers).toHaveLength(1);
-
-    console.log(wrapper.state().filterBeers);
   });
 
-  it("should filter the beers array", () => {});
+  it("should filter the beers array", async () => {
+    const wrapper = shallow(<SearchResult />);
+    wrapper.setState({ beers: [{ name: "ABC beer" }] });
+    await wrapper.instance().searchBeers("ABC beer");
+
+    expect(wrapper.instance().state.beers).toEqual([{ name: "ABC beer" }]);
+  });
 });
