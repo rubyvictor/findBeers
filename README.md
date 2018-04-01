@@ -43,7 +43,7 @@ We also do prop-types validation so you will need to add this dependency:
 Here's how to run the test from the command line:
 * `yarn test`
 
-##Deployment
+## Deployment
 
 Last but not least, you may wish to deploy the app to [Heroku](https://www.heroku.com) or simply create `gh-Pages` for it.
 
@@ -51,4 +51,4 @@ To launch the app on your local host, simply run this from command line:
 
 * `yarn start`
 
-This is my first react-based front-end project so if I left anything out please let me know. I'll keep improving and working at it to bring you even better apps. Cheers! :simple_smile:
+This is my first react-based front-end project so if I left anything out please let me know. I'll keep improving and working at it to bring you even better apps. :grinning:
