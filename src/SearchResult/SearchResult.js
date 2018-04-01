@@ -34,6 +34,7 @@ class SearchResult extends Component {
   render() {
     return (
       <div className="result-container">
+        <h1 id="page-title">You've Found the Ultimate Beer-Finder</h1>
         <SearchBar searchBeers={this.searchBeers.bind(this)} />
         {this.state.filterBeers.map((beer, i) => {
           return (
