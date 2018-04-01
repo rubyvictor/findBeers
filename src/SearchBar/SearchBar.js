@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "./SearchBar.css"
 
 class SearchBar extends Component {
   constructor() {
@@ -22,10 +23,10 @@ class SearchBar extends Component {
     return (
       <div className="search">
         <form>
-          <input
+          <input className="search-input"
             type="text"
             size="45"
-            placeholder="Enter a beer.."
+            placeholder="  Enter a beer name.."
             onChange={this.handleChange.bind(this)}
             value={this.state.searchTerm}
           />
