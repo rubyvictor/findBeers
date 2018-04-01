@@ -33,9 +33,9 @@ After cloning the repo, `cd` into the project directory you've just created and 
 
 For this to work, you'll need to create a file `setupTests.js` in your root project directory and paste this boilerplate code into it:
 
-```import { configure } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
-configure({ adapter: new Adapter() });```
+```import { configure } from "enzyme";```
+```import Adapter from "enzyme-adapter-react-16";```
+```configure({ adapter: new Adapter() });```
 
 We also do prop-types validation so you will need to add this dependency:
 * `yarn add prop-types`
