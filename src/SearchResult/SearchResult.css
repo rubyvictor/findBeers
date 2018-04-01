@@ -1,0 +1,7 @@
+.result-container {
+height: 100%;
+display: grid;
+grid-gap: 3px;
+grid-template-columns: repeat(auto-fill,min-max(200px,1fr));
+background-color: rgb(250, 194, 17);
+}

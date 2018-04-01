@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import BeerCard from "../BeerCard/BeerCard";
 import SearchBar from "../SearchBar/SearchBar";
+import "./SearchResult.css";
 
 class SearchResult extends Component {
   constructor() {
@@ -32,7 +33,7 @@ class SearchResult extends Component {
 
   render() {
     return (
-      <div>
+      <div className="result-container">
         <SearchBar searchBeers={this.searchBeers.bind(this)} />
         {this.state.filterBeers.map((beer, i) => {
           return (
