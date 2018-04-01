@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "./SearchBar.css"
+import "./SearchBar.css";
 
 class SearchBar extends Component {
   constructor() {
@@ -23,7 +23,8 @@ class SearchBar extends Component {
     return (
       <div className="search">
         <form>
-          <input className="search-input"
+          <input
+            className="search-input"
             type="text"
             size="45"
             placeholder="  Enter a beer name.."

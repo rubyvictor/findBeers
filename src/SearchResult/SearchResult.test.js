@@ -7,10 +7,13 @@ import SearchBar from "../SearchBar/SearchBar";
 
 describe("componentDidMount() http operation", () => {
   it("was able to do a simple http GET request via fetch", async () => {
-    const myMock = fetchMock.mock("https://api.punkapi.com/v2/beers?", {
-      status: 200,
-      body: [{ name: "ABC Beer" }]
-    });
+    const myMock = fetchMock.mock(
+      "https://api.punkapi.com/v2/beers?page=2&per_page=80",
+      {
+        status: 200,
+        body: [{ name: "ABC Beer" }]
+      }
+    );
     const wrapper = shallow(<SearchResult />);
     await wrapper.instance().componentDidMount();
     expect(wrapper.instance().state.beers).toEqual([{ name: "ABC Beer" }]);
