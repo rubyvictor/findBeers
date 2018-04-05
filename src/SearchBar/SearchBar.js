@@ -40,6 +40,8 @@ class SearchBar extends Component {
   }
 }
 
+// nice work with proptypes validation!
+// given that searchBeers() is an essential function to this component (i.e. SearchBar won't work without this component, I would add a .isRequired property.)
 SearchBar.propTypes = {
   searchBeers: PropTypes.func
 };
