@@ -44,6 +44,7 @@ class SearchResult extends Component {
                 name={beer.name}
                 description={beer.description}
                 food_pairing={beer.food_pairing}
+                // in line with javascript naming convention, food_pairing prop should be foodPairing
               />
             </div>
           );

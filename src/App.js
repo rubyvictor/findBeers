@@ -4,11 +4,8 @@ import "./App.css";
 
 class App extends Component {
   render() {
-    return (
-      <div>
-        <SearchResult />
-      </div>
-    );
+    return <SearchResult />;
+    // wrapping divs are not required if you're returning a single component
   }
 }
 
