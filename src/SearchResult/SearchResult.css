@@ -17,3 +17,8 @@ background-color: rgb(250, 194, 17);
     color: darkslategrey;
     text-shadow: 1px 1px white
 }
+
+.result-container SearchBar#search-bar {
+    margin: 0 auto;
+    max-width: 1600;
+}
