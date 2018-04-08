@@ -7,7 +7,7 @@ import fetchMock from "fetch-mock";
 
 it("renders without crashing", () => {
   const myMock = fetchMock.mock(
-    "https://api.punkapi.com/v2/beers?page=2&per_page=80",
+    "https://api.punkapi.com/v2/beers?page=3&per_page=80",
     {
       status: 200,
       body: [{ name: "ABC Beer" }]

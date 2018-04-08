@@ -17,7 +17,7 @@ describe("BeerCard", () => {
         imageUrl="someImageUrl.com"
         name="a beer"
         description="Some beer description"
-        food_pairing="good for meat"
+        foodPairing="good for meat"
       />
     );
 

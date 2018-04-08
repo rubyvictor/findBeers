@@ -10,15 +10,6 @@ class SearchBar extends Component {
     };
   }
 
-  handleChange(event) {
-    this.setState({ searchTerm: event.target.value });
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-    return this.props.searchBeers(this.state.searchTerm);
-  }
-
   render() {
     return (
       <div className="search">
@@ -38,12 +29,18 @@ class SearchBar extends Component {
       </div>
     );
   }
+  handleChange(event) {
+    this.setState({ searchTerm: event.target.value });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    return this.props.searchBeers(this.state.searchTerm);
+  }
 }
 
-// nice work with proptypes validation!
-// given that searchBeers() is an essential function to this component (i.e. SearchBar won't work without this component, I would add a .isRequired property.)
 SearchBar.propTypes = {
-  searchBeers: PropTypes.func
+  searchBeers: PropTypes.func.isRequired
 };
 
 export default SearchBar;

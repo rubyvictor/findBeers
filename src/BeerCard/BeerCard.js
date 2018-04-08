@@ -15,7 +15,7 @@ const BeerCard = props => {
       <div>
         <h1 className="beer-title">{props.name}</h1>
         <h2 className="beer-description">{props.description}</h2>
-        <h3 className="beer-food-pair">{props.food_pairing}</h3>
+        <h3 className="beer-food-pair">{props.foodPairing}</h3>
       </div>
     </div>
   );
@@ -25,7 +25,7 @@ BeerCard.defaultProps = {
   imageUrl: PropTypes.string,
   name: PropTypes.string,
   description: PropTypes.string,
-  food_pairing: PropTypes.string
+  foodPairing: PropTypes.string
 };
 
 export default BeerCard;

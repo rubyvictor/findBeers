@@ -13,7 +13,7 @@ class SearchResult extends Component {
   }
 
   async componentDidMount() {
-    await fetch("https://api.punkapi.com/v2/beers?page=2&per_page=80")
+    await fetch("https://api.punkapi.com/v2/beers?page=3&per_page=80")
       .then(data => {
         return data.json();
       })
@@ -43,8 +43,7 @@ class SearchResult extends Component {
                 imageUrl={beer.image_url}
                 name={beer.name}
                 description={beer.description}
-                food_pairing={beer.food_pairing}
-                // in line with javascript naming convention, food_pairing prop should be foodPairing
+                foodPairing={beer.food_pairing}
               />
             </div>
           );

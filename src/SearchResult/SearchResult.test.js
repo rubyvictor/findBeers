@@ -8,7 +8,7 @@ import SearchBar from "../SearchBar/SearchBar";
 describe("componentDidMount() http operation", () => {
   it("was able to do a simple http GET request via fetch", async () => {
     const myMock = fetchMock.mock(
-      "https://api.punkapi.com/v2/beers?page=2&per_page=80",
+      "https://api.punkapi.com/v2/beers?page=3&per_page=80",
       {
         status: 200,
         body: [{ name: "ABC Beer" }]
@@ -27,7 +27,7 @@ describe("SearchResult should load properly", () => {
     expect(wrapper.find("imageUrl")).toHaveLength(0);
     expect(wrapper.find("name")).toHaveLength(0);
     expect(wrapper.find("description")).toHaveLength(0);
-    expect(wrapper.find("food_pairing")).toHaveLength(0);
+    expect(wrapper.find("foodPairing")).toHaveLength(0);
   });
 });
 
